@@ -10,3 +10,8 @@ div.item2{
     background-color: antiquewhite;
     text-align: center;
 }
+
+table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}

@@ -1,23 +1,16 @@
-const url = 'http://localhost:3000/api/getAll'
+const url = 'https://aula03-nodejs-hiug.onrender.com/api/getAll'
+//const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
 fetch(url, {
-    // headers: {
-    //     'Content-Type': 'application/json',
-    //     'Accept': 'application/json'
-    // }
+    // mode: 'no-cors',
+    // method: 'GET'
 })
     .then(response => response.json())
     .then(data => {
         console.table(data)
+        const lista = document.getElementById("lista")
+        let nomes = "<tr><td>Nomes</td><td>Idade</td></tr>"
+        data.forEach(element => {
+            nomes += `<tr><td>${element.name}</td><td>${element.age}</td></tr>`
+        });
+        lista.innerHTML = nomes
     })
-
-
-// fetch(url, {
-//     mode: 'no-cors',
-//     method: 'GET'
-// })
-//     .then(response => {
-//         return response.text()
-//     })
-//     .then((data) => {
-//         console.log(data ? JSON.parse(data) : {})
-//     })
