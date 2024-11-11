@@ -1,0 +1,12 @@
+div.container{
+    display: grid;
+}
+div.item1{
+    background-color: aliceblue;
+    text-align: center;
+}
+
+div.item2{
+    background-color: antiquewhite;
+    text-align: center;
+}
